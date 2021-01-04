@@ -59,3 +59,8 @@ Output
 |public_ip_id |This variable will give Id of the IP address |
 |public_ip_Details |This variable will give all the details of public Ip address |
 
+## Related Projects
+
+Check out these related projects. 
+* [Bastion Implementation](https://github.com/naveenverma023/terraform-azure-bastion-setup/tree/feature/bastionImplementation)
+
