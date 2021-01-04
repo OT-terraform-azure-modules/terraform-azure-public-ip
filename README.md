@@ -30,7 +30,7 @@ module "publicIP" {
   public_ip_rg_name = "TerraformRG"
   public_ip_allocationmethod= "Static"
   tags = {
-    key1 = "value1"
+    env : "stage"
   }
 }
 
@@ -47,7 +47,7 @@ Inputs
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | public_ip_name | Name of the publicIP | `string` | `"TerraformPublicIp"` | no |
-| public_ip_tag | tag to associate with the publicIP | `string` | `"stage"` | no |
+| public_ip_tag | tag to associate with the publicIP | `map(string)` | `"stage"` | no |
 | public_ip_location | Location in which the public IP would be created | `string` | `"eastus"` | yes |
 | public_ip_rg_name | RG in which the public IP would be created | `string` | `"TerraformRG"` | yes |
 
