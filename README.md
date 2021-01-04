@@ -24,11 +24,10 @@ Usage
 
 ```hcl
 module "publicIP" {
-  source = "../publicIP"
+  source = "git::https://github.com/OT-terraform-azure-modules/terraform-Public_IP.git"
   public_ip_location = "eastus"
   public_ip_name = "TerraformPublicIp"
-  public_ip_rg_name = "module.azurerg.rgName"
-  public_ip_tag = "stage"
+  public_ip_rg_name = "TerraformRG"
   public_ip_allocationmethod= "Static"
   tags = {
     key1 = "value1"
@@ -50,7 +49,7 @@ Inputs
 | public_ip_name | Name of the publicIP | `string` | `"TerraformPublicIp"` | no |
 | public_ip_tag | tag to associate with the publicIP | `string` | `"stage"` | no |
 | public_ip_location | Location in which the public IP would be created | `string` | `"eastus"` | yes |
-| public_ip_rg_name | RG in which the public IP would be created | `string` | `"module.azurerg.rgName"` | yes |
+| public_ip_rg_name | RG in which the public IP would be created | `string` | `"TerraformRG"` | yes |
 
 Output
 ------
