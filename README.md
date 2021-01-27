@@ -62,5 +62,5 @@ Output
 ## Related Projects
 
 Check out these related projects. 
-* [Bastion Implementation](https://github.com/naveenverma023/terraform-azure-bastion-setup/tree/feature/bastionImplementation)
+* [Public Ip Implementation](https://github.com/lakshayarora476/terraform-azure-public-ip-setup/tree/main)
 
