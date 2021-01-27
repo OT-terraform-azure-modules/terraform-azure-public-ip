@@ -64,3 +64,11 @@ Output
 Check out these related projects. 
 * [Public Ip Implementation](https://github.com/lakshayarora476/terraform-azure-public-ip-setup/tree/main)
 
+### Contributors
+
+|  [![Lakshay Arora][lakshay_avatar]][lakshay_homepage]<br/>[Lakshay Arora][lakshay_homepage] |
+|---|
+
+  [lakshay_homepage]: https://github.com/lakshayarora476
+  [lakshay_avatar]: https://avatars.githubusercontent.com/lakshayarora476
+
