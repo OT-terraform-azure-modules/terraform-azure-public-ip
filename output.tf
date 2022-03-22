@@ -1,3 +1,5 @@
-  output "public_ip_Details" {
-     value = azurerm_public_ip.TerraformPublicIp
- }
+output "pub_ip_id" {
+  value = azurerm_public_ip.public_ip.*.id
+  description   = "The id of public-ip get from this" 
+}
+
