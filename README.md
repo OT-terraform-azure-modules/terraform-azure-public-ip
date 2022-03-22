@@ -8,67 +8,86 @@ Azure Public Ip Terraform module
   [opstree_homepage]: https://opstree.github.io/
   [opstree_avatar]: https://img.cloudposse.com/150x150/https://github.com/opstree.png
 
-Terraform module which creates Public IP on Azure.
+Terraform module that manages an Azure Public IP Address.There are two allocation method for public IP address.
+Possible values are Static or Dynamic.Assign a static public IP address to virtual machines, rather than a dynamic
+address, to ensure that the address never changes.Dynamic addresses can change if a resource such as a virtual 
+machine is stopped (deallocated) and then restarted through Azure.
 
-These types of resources are supported:
-
-* [Public Ip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip)
+Note : For more information, you can check example folder.
 
 Terraform versions
 ------------------
+Terraform v0.15.4
 
-Terraform 0.13.
-
-Usage
+Resources
 ------
+| Name | Type |
+|------|------|
+| [azurerm_public_ip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip) | resource |
 
-```hcl
-module "publicIP" {
-  source = "git::https://github.com/OT-terraform-azure-modules/terraform-Public_IP.git"
-  public_ip_location = "eastus"
-  public_ip_name = "TerraformPublicIp"
-  public_ip_rg_name = "TerraformRG"
-  public_ip_allocationmethod= "Static"
-  tags = {
-    env : "stage"
-  }
-}
-
-```
-
-
-Tags
-----
-* Tags are assigned to resources with name variable as prefix.
-* Additial tags can be assigned by tags variables as defined above.
 
 Inputs
 ------
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| public_ip_name | Name of the publicIP | `string` | `"TerraformPublicIp"` | no |
-| public_ip_tag | tag to associate with the publicIP | `map(string)` | `"stage"` | no |
-| public_ip_location | Location in which the public IP would be created | `string` | `"eastus"` | yes |
-| public_ip_rg_name | RG in which the public IP would be created | `string` | `"TerraformRG"` | yes |
+| pub_ip_name | Name of the public ip | `list(string)` |  | yes |
+| location | location for public ip | `string` |  | yes |
+| rg_name | Name of the resource group | `string` | | yes |
+| allocation_method | the allocation method for this IP address.Possible values are Static or Dynamic | `string` | | yes |
+| sku | The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Basic | `string` | | no |
+| tags | tags given to public ip | `map(string)` | | no |
+
+
+
+
+
 
 Output
 ------
 | Name | Description |
-|------|-------------|
-|public_ip_fqdn |This variable will give the FQDN value for the public Ip address |
-|public_ip_id |This variable will give Id of the IP address |
-|public_ip_Details |This variable will give all the details of public Ip address |
+|------|-------------|  
+| pub_ip_id | The id of the Public_ip |
+
+
+Tags
+----
+* Tags are assigned to resources according requirement.
+* Additial tags can be assigned by tags variables as defined above.
+
 
 ## Related Projects
 
-Check out these related projects. 
-* [Public Ip Implementation](https://github.com/lakshayarora476/terraform-azure-public-ip-setup/tree/main)
+Check out these related projects.
+
+* [Resource Group](https://registry.terraform.io/modules/OT-terraform-azure-modules/resource-group/azure/latest)
+
+
+Usage
+------
+
+```hcl
+module "public-ip_module" {
+  source              = "./modules/public-ip" 
+  allocation_method   = ""
+  pub_ip_name         = ["" ,""]
+  sku                 = ""
+  location            = ""
+  tags                = {
+    env : ""
+  author : ""
+  }
+}
+
+```
 
 ### Contributors
-
-|  [![Lakshay Arora][lakshay_avatar]][lakshay_homepage]<br/>[Lakshay Arora][lakshay_homepage] |
+|  [![Reena Nain][Reena_avatar]][Reena_homepage]<br/>[Reena Nain]
+[Reena_homepage] |
 |---|
 
-  [lakshay_homepage]: https://github.com/lakshayarora476
-  [lakshay_avatar]: https://avatars.githubusercontent.com/lakshayarora476
+
+  [reena_homepage]: https://gitlab.com/reena.nain 
+  [reena_avatar]:
+ https://github.com/uploads/-/system/user/avatar/9292330/avatar.png?width=400
+   
 
