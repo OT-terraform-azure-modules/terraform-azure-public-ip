@@ -9,6 +9,7 @@ Azure Public Ip Terraform module
   [opstree_avatar]: https://img.cloudposse.com/150x150/https://github.com/opstree.png
 
 * Terraform module that manages an Azure Public IP Address.
+* We can create multiple Public IPs at the same time using this module.
 * There are two allocation method for public IP address. Possible values are Static or Dynamic.
 * Assign a static public IP address to virtual machines, rather than a dynamic address, to ensure that the address never changes.
 * Dynamic addresses can change if a resource such as a virtual machine is stopped (deallocated) and then restarted through Azure.
@@ -30,7 +31,7 @@ Inputs
 ------
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| pub_ip_name | Name of the public ip | `list(string)` |  | yes |
+| public_ip_name | Name of the public ip | `list(string)` |  | yes |
 | location | location for public ip | `string` |  | yes |
 |  resource_group_name | Name of the resource group | `string` | | yes |
 | allocation_method | the allocation method for this IP address.Possible values are Static or Dynamic | `string` | Dynamic | yes |
@@ -46,7 +47,7 @@ Output
 ------
 | Name | Description |
 |------|-------------|  
-| pub_ip_id | The id of the Public_ip |
+| public_ip_id | The id's of the Public_ip |
 
 
 Tags
@@ -69,7 +70,7 @@ Usage
 module "public-ip_module" {
   source            = "./modules/public-ip"
   allocation_method = ""
-  pub_ip_name       = ["", ""]
+  public_ip_name       = ["", ""]
   sku               = ""
   location          = ""
   tags = {

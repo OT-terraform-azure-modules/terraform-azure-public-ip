@@ -25,14 +25,14 @@ module "res_group" {
 
 
 module "public-ip_module" {
-  source              = "git::https://github.com/OT-terraform-azure-modules/terraform-azure-public-ip.git?ref=v0.0.1"
+  source              = "git::https://github.com/OT-terraform-azure-modules/terraform-azure-public-ip.git?ref=master"
   resource_group_name = module.res_group.resource_group_name
   location            = module.res_group.resource_group_location
   allocation_method   = "Dynamic"
   pub_ip_name         = ["pub1", "pub2"]
   sku                 = "Basic"
   tags = {
-    env : ""
-    author : ""
+    env : "test"
+    author : "opstree"
   }
 }
