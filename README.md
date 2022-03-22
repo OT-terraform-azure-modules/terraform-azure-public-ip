@@ -32,7 +32,7 @@ Inputs
 |------|-------------|------|---------|:--------:|
 | pub_ip_name | Name of the public ip | `list(string)` |  | yes |
 | location | location for public ip | `string` |  | yes |
-| rg_name | Name of the resource group | `string` | | yes |
+|  resource_group_name | Name of the resource group | `string` | | yes |
 | allocation_method | the allocation method for this IP address.Possible values are Static or Dynamic | `string` | | yes |
 | sku | The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Basic | `string` | | no |
 | tags | tags given to public ip | `map(string)` | | no |
@@ -86,8 +86,8 @@ module "public-ip_module" {
 |---|
 
 
-  [reena_homepage]: https://gitlab.com/reena.nain 
+  [reena_homepage]: https://github.com/reena.nai 
   [reena_avatar]:
- https://github.com/uploads/-/system/user/avatar/9292330/avatar.png?width=400
+ https://gitlab.com/uploads/-/system/user/avatar/9292330/avatar.png?width=400
    
 
