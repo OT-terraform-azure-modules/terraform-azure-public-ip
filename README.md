@@ -81,13 +81,11 @@ module "public-ip_module" {
 ```
 
 ### Contributors
-|  [![Reena Nain][Reena_avatar]][Reena_homepage]<br/>[Reena Nain]
-[Reena_homepage] |
+|  [![Reena Nain][Reena_avatar]][Reena_homepage]<br/>[Reena Nain][Reena_homepage] |
 |---|
 
 
   [reena_homepage]: https://github.com/reena.nai 
-  [reena_avatar]:
- https://gitlab.com/uploads/-/system/user/avatar/9292330/avatar.png?width=400
+  [reena_avatar]: https://gitlab.com/uploads/-/system/user/avatar/9292330/avatar.png?width=400
    
 
