@@ -7,4 +7,3 @@ resource "azurerm_public_ip" "public_ip" {
     sku                 = var.sku 
     tags                = var.tags
 }
-

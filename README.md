@@ -70,7 +70,7 @@ Usage
 module "public-ip_module" {
   source            = "./modules/public-ip"
   allocation_method = ""
-  public_ip_name       = ["", ""]
+  public_ip_name    = ["", ""]
   sku               = ""
   location          = ""
   tags = {
@@ -78,8 +78,6 @@ module "public-ip_module" {
     author : ""
   }
 }
-
-
 ```
 
 ### Contributors

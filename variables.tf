@@ -31,5 +31,4 @@ variable "tags" {
   default = {
     author : "opstree"
   }
-
 }

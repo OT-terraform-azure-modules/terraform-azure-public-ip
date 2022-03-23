@@ -23,7 +23,6 @@ module "res_group" {
   }
 }
 
-
 module "public-ip_module" {
   source              = "git::https://github.com/OT-terraform-azure-modules/terraform-azure-public-ip.git?ref=master"
   resource_group_name = module.res_group.resource_group_name
