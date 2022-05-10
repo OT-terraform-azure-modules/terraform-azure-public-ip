@@ -1,5 +1,5 @@
 variable "public_ip_name" {
-  type        = list(string)
+  type        = string
   description = "(Required) Specifies the name of the Public IP resource"
 }
 
