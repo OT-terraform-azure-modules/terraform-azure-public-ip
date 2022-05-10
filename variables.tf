@@ -25,6 +25,12 @@ variable "sku" {
   default     = "Basic"
 }
 
+variable "domain_name_label" {
+  type        = string
+  description = "(Optional) Label for the Domain Name. Will be used to make up the FQDN. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system."
+  default     = ""
+}
+
 variable "tags" {
   description = "A mapping of tags which should be assigned to the PublicIP"
   type        = map(string)
