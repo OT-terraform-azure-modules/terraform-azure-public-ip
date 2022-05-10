@@ -28,6 +28,7 @@ module "public-ip_module" {
   resource_group_name = module.res_group.resource_group_name
   location            = module.res_group.resource_group_location
   allocation_method   = "Dynamic"
+  domain_name_label   = "mydomain"  
   public_ip_name         = ["pub1", "pub2"]
   sku                 = "Basic"
   tags = {
