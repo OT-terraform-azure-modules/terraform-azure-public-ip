@@ -1,5 +1,5 @@
 variable "public_ip_name" {
-  type        = string
+  type        = list
   description = "(Required) Specifies the name of the Public IP resource"
 }
 
@@ -23,11 +23,6 @@ variable "sku" {
   type        = string
   description = "(Optional) The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Basic."
   default     = "Basic"
-}
-
-variable "domain_name_label" {
-  description = "(Optional) Label for the Domain Name. Will be used to make up the FQDN. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system."
-  default     = ""
 }
 
 variable "tags" {
